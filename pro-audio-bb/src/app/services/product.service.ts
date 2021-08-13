@@ -1,27 +1,27 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
-import {environment} from '../../environments/environment';
-import {Observable} from "rxjs";
+import { environment } from '../../environments/environment';
 
-import { ProductModelServer } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-   url = environment.serverURL;
+   //url = environment.serverURL;
+  private SERVER_URL = environment.SERVER_URL;
 
   constructor(private http: HttpClient) {
 
      }
+     /*Fetch all product*/
+     getAllProducts(numberOfResults = 5) {
+       return this.http.get(this.SERVER_URL + '/products', {
+         params: 
+         {
+           limit: numberOfResults.toString()
+          }
+        });
+     }
 
-  getAllProducts(numberOfResults = 2) {
-    return this.http.get(this.url + 'products', {
-      params: {
-        limit: numberOfResults.toString()
-      }
-    });
-  }
 }

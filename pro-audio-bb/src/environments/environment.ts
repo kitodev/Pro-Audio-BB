@@ -4,16 +4,8 @@
 
 export const environment = {
   production: false,
-  firebaseConfig: {
-    apiKey: "AIzaSyAQdXxLL-20os3adowbsC_xZS3uLUnXy0k",
-    authDomain: "halicon-2741e.firebaseapp.com",
-    databaseURL: "https://halicon-2741e.firebaseio.com",
-    projectId: "halicon-2741e",
-    storageBucket: "halicon-2741e.appspot.com",
-    messagingSenderId: "755543065432",
-    appId: "1:755543065432:web:d4ca8871fbd470cb58db2d",
-    measurementId: "G-0ZQ8RX0BSN"
-  }
+  SERVER_URL: "http://localhost:3000/api"
+
 };
 
 /*
