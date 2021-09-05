@@ -13,9 +13,7 @@ import { ProductComponent } from './components/product/product.component';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
-import { ChartsModule } from 'ng2-charts';
-import { MyLineChartComponent } from './my-line-chart/my-line-chart.component';
-
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,14 +24,13 @@ import { MyLineChartComponent } from './my-line-chart/my-line-chart.component';
     HomeComponent,
     ProductComponent,
     ThankyouComponent,
-    MyLineChartComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    ChartsModule,
     HttpClientModule,
+    NgxChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
